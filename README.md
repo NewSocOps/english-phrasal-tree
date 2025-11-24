@@ -39,19 +39,29 @@ npm run lint
 
 ## 🚢 Deployment
 
-This project is automatically deployed to GitHub Pages when changes are pushed to the `main` branch. The deployment workflow:
+This project is automatically deployed to GitHub Pages when changes are pushed to the `main` branch.
+
+### ⚠️ GitHub Pages Setup Required
+
+**Before the first deployment, you must enable GitHub Pages in the repository settings:**
+
+1. Go to repository **Settings** → **Pages**
+2. Under **Build and deployment** → **Source**, select **GitHub Actions**
+3. Save the changes
+
+📋 **For detailed setup instructions, see [GITHUB_PAGES_SETUP.md](./GITHUB_PAGES_SETUP.md)**
+
+### Deployment Workflow
+
+Once GitHub Pages is enabled, the deployment workflow automatically:
 
 1. Builds the application using Vite
 2. Uploads the built files to GitHub Pages
 3. Deploys to `https://newsocops.github.io/english-phrasal-tree/`
 
-### GitHub Pages Setup
-
-To enable GitHub Pages for this repository:
-
-1. Go to repository **Settings** > **Pages**
-2. Under **Source**, select **GitHub Actions**
-3. The workflow will automatically deploy on the next push to `main`
+The workflow is triggered on:
+- Every push to the `main` branch
+- Manual trigger via Actions tab (workflow_dispatch)
 
 ## 🛠️ Tech Stack
 
