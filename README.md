@@ -1,62 +1,16 @@
-You are an expert Full-Stack Web Developer and UI/UX Designer specializing in interactive educational applications. Build a "Situational English Phrasal Map" web application.
+# React + Vite
 
-Goal:
-Create a single-page interactive React application that visualizes English learning scenarios as a gamified, animated map with drill-down conversational trees.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Requirements:
+Currently, two official plugins are available:
 
-1. World Map (Landing View):
-- A colorful, gamified map (Mario-World or isometric-city style).
-- Each scenario is represented as an icon/node (e.g., Café, Airport, Interview).
-- Nodes gently animate (pulse/hover) using Framer Motion.
-- Clicking a node zooms into the scenario.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-2. Scenario Drill-Down View:
-- Smooth animated zoom-in from map to scenario.
-- Display an interactive conversational tree.
-- Each step includes: speaker label, phrase text, and multiple reply options.
-- Options appear as buttons; selecting one reveals the next step.
-- The active conversation path highlights / lights up.
-- The tree expands dynamically as the conversation progresses.
+## React Compiler
 
-3. Visual & UX Requirements:
-- Use SVG icons for objects and characters.
-- Use Framer Motion for transitions and animations.
-- UI must be colorful, friendly, modern, and mobile-responsive.
-- Include a “Listen” button next to each phrase (mock TTS function is fine).
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-4. Technical Stack:
-- React (Vite or Next.js)
-- Tailwind CSS
-- Framer Motion
-- Lucide-React or Heroicons
+## Expanding the ESLint configuration
 
-5. Data Structure Example (described in plain text):
-Use a JSON-like structure such as:
-scenarios = {
-  cafe: {
-    title: "Ordering Coffee",
-    steps: [
-      {
-        id: 1,
-        speaker: "Barista",
-        text: "Hi there! What can I get for you?",
-        options: [
-          { text: "A large latte, please.", nextStepId: 2 },
-          { text: "Just a minute, please.", nextStepId: 3 }
-        ]
-      }
-    ]
-  }
-}
-
-Deliverables:
-1. Complete runnable project structure (components, pages, assets).
-2. Main App.jsx or page.tsx file.
-3. World Map component with animated nodes.
-4. Scenario Drill-Down component with an animated conversational tree.
-5. Clear comments showing how to add new scenarios.
-
-Start:
-Begin by generating the full directory structure, the main App file, and the World Map component with placeholder scenarios and animations.
-
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
